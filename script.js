@@ -40,9 +40,9 @@ if (testimonials.length > 0) {
     }, 5000);
 }
 
-// Placeholder for icons (you can replace with actual icon fonts or SVGs)
+
 const icons = document.querySelectorAll('[class^="icon-"]');
 icons.forEach(icon => {
-    // This is a placeholder - in a real implementation, you'd use an icon font or SVG
+   
     icon.textContent = '●'; // Placeholder dot
 });

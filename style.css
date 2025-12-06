@@ -37,7 +37,7 @@ h1, h2, h3 {
 }
 
 .header.scrolled {
-    background: #000;
+    background: #0e5b7c;
 }
 
 .header .container {
@@ -47,10 +47,13 @@ h1, h2, h3 {
 }
 
 .logo a {
-    font-size: 30px;
+    font-size: 30px;position: relative;
+    top: 15px; right: 75px;
     font-weight: 700;
     color: #000000;
-     text-decoration: none; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 4px 0px 4px rgb(14, 1, 1);
 }
 
 .nav ul {
@@ -59,14 +62,16 @@ h1, h2, h3 {
 }
 
 .nav li {
-    margin: 0 40px;
+    margin: 0 30px;
+    margin-top: 35px;
 }
 
 .nav a {
     color: #ecdede;
     text-decoration: none;
-    transition: color 0.3s ease;font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    transition: color 0.3s ease;font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     ;
+     box-shadow: 10px 10px 15px rgba(196, 189, 189, 0.1);
 }
 
 .nav a:hover {
@@ -83,6 +88,7 @@ h1, h2, h3 {
     margin-left: 20px;
     text-decoration: none;
     font-size: 20px;
+    margin-top: 40px;
 }
 
 .header-icons a:hover {
@@ -489,7 +495,7 @@ h1, h2, h3 {
 /* Collection Banner */
 .collection-banner {
     height: 50vh;
-    background: url('collection-bg.jpg') center/cover no-repeat;
+    background: url('https://media.gettyimages.com/id/1157433618/video/dolly-right-camera-of-ancient-golden-jewelry-and-accessories-with-gemstones-of-traditional.jpg?s=640x640&k=20&c=ntQVCtXuIOOcRkC5rRncBk-_e2GCBSfY7nYuJ153OXg=') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
