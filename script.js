@@ -37,7 +37,7 @@ if (testimonials.length > 0) {
     setInterval(() => {
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         showTestimonial(currentTestimonial);
-    }, 5000);
+    }, 3000);
 }
 
 
