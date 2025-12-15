@@ -6,61 +6,71 @@
     <meta name="description" content="Explore luxury jewelry collections including gold, diamond, bridal, and men's accessories. Handcrafted premium pieces for every occasion.">
     <meta name="keywords" content="jewelry, gold jewelry, diamond jewelry, bridal jewelry, rings, necklaces, bracelets">
     <meta name="author" content="VelvetJewels">
-
     <title>Luxury Jewelry - Collections</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <!-- Header/Navbar -->
+   <!-- Header/Navbar -->
     <header class="header">
-        <div class="container">
-            <div class="logo">
-                <a style="color: rgb(133, 133, 133); font-family: Verdana, Geneva, Tahoma, sans-serif;" href="index.html">VelvetJewels</a>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="collections.html">Collections</a></li>
-                    <li><a href="#customize">Customize</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-icons">
-                <a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="#account"><i class="fa-regular fa-user"></i></a>
-                <a href="#wishlist"><i class="fa-regular fa-heart"></i></a>
-                <a href="#cart"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-    </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-none" style="width: 90%;margin-left: 5%;" >
+            <div class="container"  style="background: #ffffff;border-radius: 10px; margin-top: 20px;border: 2px solid #000000;">
+                <a class="navbar-brand" style="background: #ffffff;border-radius: 10px; background:  oklab(67.527% 0.09735 0.03563); width: 170px; text-align: center ;" href="index.html">Eterna Jewels</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="mainNav"   >
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#customize">Customize</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex header-icons align-items-center ms-3">
+                        <a class="nav-link" href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a class="nav-link" href="#account"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link" href="#wishlist"><i class="fa-regular fa-heart"></i></a>
+                        <a class="nav-link" href="#cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- Marquee -->
+    <div class="marquee top-marquee bg-white py-1 " style="position: fixed;  top: 0; left: 0; width: 100%; z-index: 9999;border: 1px solid black;">
+    <marquee style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" behavior="scroll" direction="left">
+        Welcome to Eterna Jewels - Discover the Art of True Luxury | Exclusive Offers | Handcrafted Jewelry • Premium Gold & Diamonds • Exclusive Designs • Limited Edition Pieces • Shop the Latest Arrivals | New Arrivals Weekly
+    </marquee>
+</div>
     <!-- Collection Banner -->
     <section class="collection-banner">
-        <div class="banner-overlay"></div>
+        <div class="banner-overlay" style="background: url('https://www.basicsbyluamarta.com/cdn/shop/collections/joyas_en_oro_y_plata_dorada_2400x.jpg?v=1671197017')center/cover no-repeat;margin-top:20px;height: 480px;"></div>
         <div class="banner-content">
-            <h1 style="color: rgb(222, 215, 33); font-family: Verdana, Geneva, Tahoma, sans-serif;">Explore Our Luxury Collections</h1>
-            <p style="color: rgb(222, 215, 33); font-family: Verdana, Geneva, Tahoma, sans-serif;">Handcrafted pieces curated for those who appreciate sophistication and style.</p>
+            <h1 style="color: rgb(0, 0, 0); font-size: 64px;padding-top: 180px;">𝔼𝕤𝕤𝕖𝕟𝕥𝕚𝕒𝕝 𝕁𝕖𝕨𝕖𝕝𝕣𝕪 ℂ𝕠𝕝𝕝𝕖𝕔𝕥𝕚𝕠𝕟𝕤</h1>
+            <p style="color: rgb(255, 255, 255); font-family: Verdana, Geneva, Tahoma, sans-serif;background: rgb(94, 81, 81);">Handcrafted pieces curated for those who appreciate sophistication and style</p>
         </div>
     </section>
 
     <!-- Collection Sections -->
     <section id="bridal" class="collection-section">
         <div class="container">
-            <h2 style="background-color:#125f5b; border-radius: 15px;" >Bridal Collection</h2>
+            <h2 style="background-color:oklab(67.527% 0.09735 0.03563); border-radius: 10px;border: 2px solid #000000 ;" >Bridal Collection</h2>
             <p>Elegant designs for your special day, symbolizing eternal love and commitment.</p>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlrSRR_PeOJmHl44TFDAhCwBX0BXN3VWX8jA&s" alt="Bridal Ring">
                     <h3>Engagement Ring</h3>
                     <p>Rs.80,000</p>
-                    <button class="btn-add">Quick Add</button>
+                                      <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
                 <div class="product-card">
                     <img src="https://itrani.com/cdn/shop/files/AAKAAR00219-223-5.jpg?v=1756790218&width=2048" alt="Bridal Necklace">
@@ -72,7 +82,9 @@
                     <img src="https://manubhai.in/SocialMedia/post_artworks/DFBE02386.jpg?ver=1.1" alt="Bridal Earrings">
                     <h3>Bridal Earrings</h3>
                     <p>Rs.50,000</p>
-                    <button class="btn-add">Quick Add</button>
+                                     <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
             </div>
         </div>
@@ -87,19 +99,25 @@
                     <img src="https://silvermerc.com/cdn/shop/files/SBN9C_281_1.jpg?v=1690355505" alt="Gold Chain">
                     <h3>Gold Chain</h3>
                     <p>Rs.200,000</p>
-                    <button class="btn-add">Quick Add</button>
+                                     <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
                 <div class="product-card">
                     <img src="https://meerzah.pk/cdn/shop/files/bb-103_1.jpg?v=1732281847&width=600" alt="Gold Bracelet">
                     <h3>Gold Bracelet</h3>
-                    <p>Rs.</p>
-                    <button class="btn-add">Quick Add</button>
+                    <p>Rs.78,000</p>
+                                      <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
                 <div class="product-card">
                     <img src="https://puregold.pk/wp-content/uploads/GL0012-3.jpg" alt="Gold Pendant">
                     <h3>Gold Pendant</h3>
-                    <p>$149</p>
-                    <button class="btn-add">Quick Add</button>
+                    <p>Rs.87,749</p>
+                                      <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
             </div>
         </div>
@@ -114,19 +132,25 @@
                     <img src="https://asavir.pk/wp-content/uploads/2024/11/JP03683-YGP600_7_lar.jpg" alt="Diamond Ring">
                     <h3>Diamond Chain</h3>
                     <p>87,799</p>
-                    <button class="btn-add">Quick Add</button>
+                                      <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
                 <div class="product-card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjF5EnPXoj8Lpt5RIBNHofgq8imp6N0HJxAA&s" alt="Diamond Necklace">
                     <h3>Diamond Necklace</h3>
-                    <p>125,000</p>
-                    <button class="btn-add">Quick Add</button>
+                    <p>Rs.125,000</p>
+                                       <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
                 <div class="product-card">
                     <img src="https://cdn.orra.co.in/media/catalog/product/cache/10238651d5f95594b9023f998383bb67/c/s/csn23a05-1.jpg" alt="Diamond Earrings">
-                    <h3>Diamond Earrings & Necklace</h3>
-                    <p>120,000</p>
-                    <button class="btn-add">Quick Add</button>
+                    <h3>Diamond Earrings</h3>
+                    <p>Rs.120,000</p>
+                                      <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
             </div>
         </div>
@@ -141,19 +165,25 @@
                     <img src="https://s.alicdn.com/@sc04/kf/H7b659629e45c42b5a143eb512d6fd781K/Wholesale-VVS1-D-Color-Moissanite-Watch-Luxury-Mechanical-Automatic-Dress-Hip-Hop-Watch-Iced-Out-Brand-Automatic-Watch-for-Men.jpg" alt="Men's Watch">
                     <h3>Luxury Watch</h3>
                     <p>Rs.99,999</p>
-                    <button class="btn-add">Quick Add</button>
+                                     <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
                 <div class="product-card">
                     <img src="https://www.misshighness.com/cdn/shop/files/11_d6e22d43-9744-4496-a2c0-740ae038f04d.jpg?v=1761394390" alt="Men's Ring">
                     <h3>Diamond Ring</h3>
                     <p>Rs.85,000</p>
-                    <button class="btn-add">Quick Add</button>
+                                       <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
                 <div class="product-card">
                     <img src="https://www.norsegarde.com/cdn/shop/files/1_608be84c-1696-4968-abd5-48fc6c92385e.jpg?v=1721672249&width=2048" alt="Men's Bracelet">
                     <h3>Leather Bracelet</h3>
                     <p>Rs.1999</p>
-                    <button class="btn-add">Quick Add</button>
+                                      <button class="btn-add" onclick="location.href='cart.html'">
+  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+</button>
                 </div>
             </div>
         </div>
@@ -198,7 +228,7 @@
             </div>
         </div>
     </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
