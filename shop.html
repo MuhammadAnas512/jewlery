@@ -9,6 +9,10 @@
 
     <title>Shop</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -16,34 +20,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-   <!-- Header/Navbar -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-none" style="width: 90%;margin-left: 5%;" >
-            <div class="container"  style="background: #ffffff;border-radius: 10px; margin-top: 20px;border: 2px solid #000000;">
-                <a class="navbar-brand" style="background: #ffffff;border-radius: 10px; background:  oklab(67.527% 0.09735 0.03563); width: 170px; text-align: center ;" href="index.html">Eterna Jewels</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Navbar -->
+<header class="bg-white border-b border-gray-100 sticky top-10 z-50">
+  <nav class="max-w-7xl mx-auto px-6 relative">
 
-                <div class="collapse navbar-collapse" id="mainNav"   >
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#customize">Customize</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="d-flex header-icons align-items-center ms-3">
-                        <a class="nav-link" href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a class="nav-link" href="#account"><i class="fa-regular fa-user"></i></a>
-                        <a class="nav-link" href="#wishlist"><i class="fa-regular fa-heart"></i></a>
-                        <a class="nav-link" href="#cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Top Bar -->
+    <div class="flex h-16 items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-serif text-gray-900">
+        Eterna <span class="text-amber-600">Jewels</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center space-x-10 text-gray-700">
+        <a href="index.html" class="hover:text-amber-600">Home</a>
+        <a href="shop.html" class="hover:text-amber-600">Shop</a>
+        <a href="collections.html" class="hover:text-amber-600">Collections</a>
+        <a href="#about" class="hover:text-amber-600">About</a>
+        <a href="contact.html" class="hover:text-amber-600">Contact</a>
+      </div>
+
+      <!-- Icons + Hamburger (Top Navbar only) -->
+      <div class="flex items-center space-x-4 text-gray-700 text-lg">
+
+        <!-- Icons (always visible) -->
+        <a href="#"><i class="fa-solid fa-magnifying-glass hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-regular fa-user hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-regular fa-heart hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping hover:text-amber-600"></i></a>
+
+        <!-- Hamburger (mobile only) -->
+        <button id="menuBtn" class="lg:hidden text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu (ONLY LINKS, NO ICONS) -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden absolute top-16 left-0 w-full bg-white border-t border-gray-100 shadow-lg"
+    >
+      <div class="px-6 py-6 space-y-4 text-gray-700 font-medium">
+        <a href="index.html" class="block hover:text-amber-600">Home</a>
+        <a href="shop.html" class="block hover:text-amber-600">Shop</a>
+        <a href="collections.html" class="block hover:text-amber-600">Collections</a>
+        <a href="#about" class="block hover:text-amber-600">About</a>
+        <a href="contact.html" class="block hover:text-amber-600">Contact</a>
+      </div>
+    </div>
+
+  </nav>
+</header>
 <!-- Marquee -->
     <div class="marquee top-marquee bg-white py-1 " style="position: fixed;  top: 0; left: 0; width: 100%; z-index: 9999;border: 1px solid black;">
     <marquee style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" behavior="scroll" direction="left">
@@ -52,10 +82,10 @@
 </div>
 
     <!-- Shop Banner -->
-    <section class="collection-banner">
+    <section class="collection-banner" style="background: url('https://cdn.shopify.com/s/files/1/0333/7460/1355/files/001-Jewellery12.jpg?v=1706798616')center/cover no-repeat;">
         <div class="banner-overlay"></div>
-        <div class="banner-content">
-            <h1 style="color: rgb(0, 0, 0); padding-top: 180px;">𝔻𝕖𝕝𝕚𝕔𝕒𝕥𝕖 𝔻𝕖𝕤𝕚𝕘𝕟𝕤, 𝔼𝕟𝕕𝕝𝕖𝕤𝕤 𝔹𝕖𝕒𝕦𝕥𝕪</h1>
+        <div class="banner-content" style="text-align: left;">
+            <h1 style="color: rgb(255, 255, 255); padding-top: 50px;">𝔻𝕖𝕝𝕚𝕔𝕒𝕥𝕖 𝔻𝕖𝕤𝕚𝕘𝕟𝕤 𝔼𝕟𝕕𝕝𝕖𝕤𝕤 𝔹𝕖𝕒𝕦𝕥𝕪</h1>
             <p style="color: rgb(255, 255, 255); font-family: Verdana, Geneva, Tahoma, sans-serif;background: rgb(64, 60, 60);">Discover handcrafted pieces that blend tradition with modern elegance</p>
         </div>
     </section>
@@ -63,18 +93,18 @@
     <!-- Featured Products Section -->
     <section id="featured" class="collection-section">
         <div class="container">
-            <h2 style="background-color:#ffffff;font-size: 52px;width: 80%;text-align: center;;margin-left: 9%;">𝔼𝕏ℂ𝕃𝕌𝕊𝕀𝕍𝔼 ℂ𝕆𝕃𝕃𝔼ℂ𝕋𝕀𝕆ℕ</h2>
+            <h2 style="background-color:#ffffff;font-size: 48px;width: 100%;text-align: center;">𝔼𝕏ℂ𝕃𝕌𝕊𝕀𝕍𝔼 ℂ𝕆𝕃𝕃𝔼ℂ𝕋𝕀𝕆ℕ</h2>
             <p>𝗖𝗮𝗿𝗲𝗳𝘂𝗹𝗹𝘆 𝗰𝘂𝗿𝗮𝘁𝗲𝗱 𝗷𝗲𝘄𝗲𝗹𝗿𝘆 𝘁𝗵𝗮𝘁 𝗱𝗲𝗳𝗶𝗻𝗲𝘀 𝗹𝘂𝘅𝘂𝗿𝘆 𝗮𝗻𝗱 𝗹𝗮𝘀𝘁𝗶𝗻𝗴 𝗶𝗺𝗽𝗿𝗲𝘀𝘀𝗶𝗼𝗻𝘀</p>
             <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlrSRR_PeOJmHl44TFDAhCwBX0BXN3VWX8jA&s" alt="Engagement Ring">
+                <div data-aos="fade-right"  class="product-card">
+                    <img src="https://www.qualitydiamonds.co.uk/media/16745/2020-celebrity-engagement-rings-quality-diamonds.jpeg?anchor=center&mode=crop&width=900&height=500&rnd=132367845390000000&format=webp" alt="Engagement Ring">
                     <h3>Engagement Ring</h3>
                     <p>Rs.80,000</p>
                     <button class="btn-add" onclick="location.href='cart.html'">
                   <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                   </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-up" class="product-card">
                     <img src="https://itrani.com/cdn/shop/files/AAKAAR00219-223-5.jpg?v=1756790218&width=2048" alt="Wedding Necklace">
                     <h3>Wedding Necklace</h3>
                     <p>Rs.110,000</p>
@@ -82,7 +112,7 @@
                      <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                    </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-down" class="product-card">
                     <img src="https://manubhai.in/SocialMedia/post_artworks/DFBE02386.jpg?ver=1.1" alt="Bridal Earrings">
                     <h3>Bridal Earrings</h3>
                     <p>Rs.50,000</p>
@@ -90,7 +120,7 @@
                   <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                   </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-up" class="product-card">
                     <img src="https://silvermerc.com/cdn/shop/files/SBN9C_281_1.jpg?v=1690355505" alt="Gold Chain">
                     <h3>Gold Chain</h3>
                     <p>Rs.200,000</p>
@@ -98,7 +128,7 @@
                  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                  </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-left" class="product-card">
                     <img src="https://meerzah.pk/cdn/shop/files/bb-103_1.jpg?v=1732281847&width=600" alt="Gold Bracelet">
                     <h3>Gold Bracelet</h3>
                     <p>Rs.78,000</p>
@@ -106,7 +136,7 @@
                      <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                     </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-right" class="product-card">
                     <img src="https://puregold.pk/wp-content/uploads/GL0012-3.jpg" alt="Gold Pendant">
                     <h3>Gold Pendant</h3>
                     <p>Rs.87,749</p>
@@ -114,7 +144,7 @@
                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                   </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-up" class="product-card">
                     <img src="https://asavir.pk/wp-content/uploads/2024/11/JP03683-YGP600_7_lar.jpg" alt="Diamond Ring">
                     <h3>Diamond Ring</h3>
                     <p>Rs.87,799</p>
@@ -122,7 +152,7 @@
                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                     </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-down" class="product-card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjF5EnPXoj8Lpt5RIBNHofgq8imp6N0HJxAA&s" alt="Diamond Necklace">
                     <h3>Diamond Necklace</h3>
                     <p>Rs.125,000</p>
@@ -130,7 +160,7 @@
                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                      </button>
                 </div>
-                <div class="product-card">
+                <div data-aos="fade-up" class="product-card">
                     <img src="https://cdn.orra.co.in/media/catalog/product/cache/10238651d5f95594b9023f998383bb67/c/s/csn23a05-1.jpg" alt="Diamond Earrings">
                     <h3>Diamond Earrings</h3>
                     <p>Rs.120,000</p>
@@ -139,7 +169,7 @@
                  </button>
                 </div>
 
-                    <div class="product-card">
+                    <div data-aos="fade-left" class="product-card">
                     <img src="https://www.daintyrocks.co.uk/cdn/shop/files/il_fullxfull.7055144729_idmv.jpg?v=1758928962&width=1946" alt="Diamond Earrings">
                     <h3>Bracelets</h3>
                     <p>Rs.2500</p>
@@ -147,7 +177,7 @@
                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                    </button>
                 </div>
-                    <div class="product-card">
+                    <div data-aos="fade-right" class="product-card">
                     <img src="https://unjaded.com.pk/cdn/shop/files/20240518_124932.jpg?v=1716701315" alt="Diamond Earrings">
                     <h3>Golden Hoops</h3>
                     <p>Rs.1000</p>
@@ -156,7 +186,7 @@
                    </button>
                 </div>
 
-                    <div class="product-card">
+                    <div data-aos="fade-up" class="product-card">
                     <img src="https://alita.pk/cdn/shop/files/Golden_Metal_Bangles_1_1445x.jpg?v=1727334573" alt="Diamond Earrings">
                     <h3>Bangles</h3>
                     <p>Rs.2000</p>
@@ -212,6 +242,21 @@
         </div>
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    
+
+<script src="script.js"></script>
+    <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>

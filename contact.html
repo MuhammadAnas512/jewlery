@@ -10,50 +10,70 @@
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-   <!-- Header/Navbar -->
-    <header class="header" >
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm"  >
-            <div class="container"  style="background: #ffffff;border-radius: 0px; margin-top: 20px;border: 2px solid #000000;">
-                <a class="navbar-brand" style="background: #ffffff;border-radius: 10px; background:  #cf7c7c; width: 170px; text-align: center ;" href="#home">Eterna Jewels</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+   <!-- Navbar -->
+<header class="bg-white border-b border-gray-100 sticky top-10 z-50">
+  <nav class="max-w-7xl mx-auto px-6 relative">
 
-                <div class="collapse navbar-collapse" id="mainNav"  >
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#customize">Customize</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="d-flex header-icons align-items-center ms-3">
-                        <a class="nav-link" href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a class="nav-link" href="#account"><i class="fa-regular fa-user"></i></a>
-                        <a class="nav-link" href="#wishlist"><i class="fa-regular fa-heart"></i></a>
-                        <a class="nav-link" href="#cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Top Bar -->
+    <div class="flex h-16 items-center justify-between">
 
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-serif text-gray-900">
+        Eterna <span class="text-amber-600">Jewels</span>
+      </a>
 
-    <!-- Contact Banner -->
-    <section class="collection-banner">
-        <div class="banner-overlay" style="background:url('https://img.freepik.com/premium-photo/website-internet-contact-us-page-concept-with-phone-email-mail-icons-symbol-telephone-mail-address-website-page-contact-us-web-banner-copy-space-grey-background_256259-3515.jpg')no-repeat;background-size: cover;margin-top: 30px;" ></div>
-        <div class="banner-content">
-            <h1 style="color: rgb(255, 255, 255);padding-top: 180px;font-size: 64px;">𝔾𝕖𝕥 𝕀𝕟 𝕋𝕠𝕦𝕔𝕙</h1>
-            <p style="color: rgb(255, 255, 255); font-family: Verdana, Geneva, Tahoma, sans-serif;">𝗛𝗮𝘃𝗲 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻 𝗮𝗯𝗼𝘂𝘁 𝗼𝘂𝗿 𝗰𝗼𝗹𝗹𝗲𝗰𝘁𝗶𝗼𝗻𝘀 𝗼𝗿 𝗰𝘂𝘀𝘁𝗼𝗺 𝗼𝗿𝗱𝗲𝗿𝘀?</p>
-        </div>
-    </section>
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center space-x-10 text-gray-700">
+        <a href="index.html" class="hover:text-amber-600">Home</a>
+        <a href="shop.html" class="hover:text-amber-600">Shop</a>
+        <a href="collections.html" class="hover:text-amber-600">Collections</a>
+        <a href="#about" class="hover:text-amber-600">About</a>
+        <a href="contact.html" class="hover:text-amber-600">Contact</a>
+      </div>
+
+      <!-- Icons + Hamburger (Top Navbar only) -->
+      <div class="flex items-center space-x-4 text-gray-700 text-lg">
+
+        <!-- Icons (always visible) -->
+        <a href="#"><i class="fa-solid fa-magnifying-glass hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-regular fa-user hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-regular fa-heart hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping hover:text-amber-600"></i></a>
+
+        <!-- Hamburger (mobile only) -->
+        <button id="menuBtn" class="lg:hidden text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu (ONLY LINKS, NO ICONS) -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden absolute top-16 left-0 w-full bg-white border-t border-gray-100 shadow-lg"
+    >
+      <div class="px-6 py-6 space-y-4 text-gray-700 font-medium">
+        <a href="index.html" class="block hover:text-amber-600">Home</a>
+        <a href="shop.html" class="block hover:text-amber-600">Shop</a>
+        <a href="collections.html" class="block hover:text-amber-600">Collections</a>
+        <a href="#about" class="block hover:text-amber-600">About</a>
+        <a href="contact.html" class="block hover:text-amber-600">Contact</a>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+   
 
     <!-- Contact Section -->
     <section id="contact" class="collection-section">
@@ -123,5 +143,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
+    <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+
 </body>
 </html>
