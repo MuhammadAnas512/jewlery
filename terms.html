@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eterna Jewels - Home</title>
+    <title>Refund Policy</title>
     <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,31 +22,60 @@
 <!-- ================= NAVBAR (UNCHANGED) ================= -->
 <header class="bg-white border-b border-gray-100 absolute top-10   z-50 w-full">
   <nav class="max-w-7xl mx-auto px-6 relative">
+
+    <!-- Top Bar -->
     <div class="flex h-16 items-center justify-between">
+
+      <!-- Logo -->
       <a href="index.html" class="text-2xl font-serif text-gray-900">
         Eterna <span class="text-amber-600">Jewels</span>
       </a>
 
+      <!-- Desktop Menu -->
       <div class="hidden lg:flex items-center space-x-10 text-gray-700">
-        <a href="index.html" class="hover:text-amber-600">Home</a>
+        <a href="index.html" class="hover:text-amber-600 hover:decoration-none">Home</a>
         <a href="shop.html" class="hover:text-amber-600">Shop</a>
         <a href="collections.html" class="hover:text-amber-600">Collections</a>
         <a href="#about" class="hover:text-amber-600">About</a>
         <a href="contact.html" class="hover:text-amber-600">Contact</a>
       </div>
 
+      <!-- Icons + Hamburger (Top Navbar only) -->
       <div class="flex items-center space-x-4 text-gray-700 text-lg">
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="#"><i class="fa-regular fa-user"></i></a>
-        <a href="#"><i class="fa-regular fa-heart"></i></a>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+        <!-- Icons (always visible) -->
+        <a href="#"><i class="fa-solid fa-magnifying-glass hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-regular fa-user hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-regular fa-heart hover:text-amber-600"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping hover:text-amber-600"></i></a>
+
+        <!-- Hamburger (mobile only) -->
         <button id="menuBtn" class="lg:hidden text-2xl">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
+
     </div>
+
+    <!-- Mobile Menu (ONLY LINKS, NO ICONS) -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden absolute top-16 left-0 w-full bg-white border-t border-gray-100 shadow-lg"
+    >
+      <div class="px-6 py-6 space-y-4 text-gray-700 font-medium">
+        <a href="index.html" class="block hover:text-amber-600">Home</a>
+        <a href="shop.html" class="block hover:text-amber-600">Shop</a>
+        <a href="collections.html" class="block hover:text-amber-600">Collections</a>
+        <a href="#about" class="block hover:text-amber-600">About</a>
+        <a href="contact.html" class="block hover:text-amber-600">Contact</a>
+      </div>
+    </div>
+
   </nav>
 </header>
+
+
+
 <!-- ====================================================== -->
 
 <!-- PAGE CONTENT -->
@@ -127,7 +156,7 @@ We reserve the right to update, change, or replace any part of these Terms & Con
   </div>
 </footer>
 <!-- ====================================================== -->
-<script>
+ <script>
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
@@ -135,6 +164,7 @@ We reserve the right to update, change, or replace any part of these Terms & Con
     mobileMenu.classList.toggle("hidden");
   });
 </script>
+
 
 </body>
 </html>
