@@ -148,7 +148,7 @@
       <h3>Policies</h3>
       <ul>
         <li><a href="terms.html">Terms & Conditions</a></li>
-        <li><a href="refund-policy.html">Refund Policy</a></li>
+        <li><a href="refund.html">Refund Policy</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="shipping.html">Shipping Policy</a></li>
       </ul>
@@ -163,6 +163,14 @@
   </div>
 </footer>
 <!-- ===================================================== -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 </html>
