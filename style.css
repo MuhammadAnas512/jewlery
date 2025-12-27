@@ -292,7 +292,7 @@ h3 {
 }
 
 .product-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(40, 3, 3, 0.1);
@@ -327,7 +327,7 @@ h3 {
   margin: 15px 20px 20px;
   display: block;
   z-index: 1;
-  background: #d68e22;
+  background: #d97f17;
 }
 .product-card .btn-add:hover {
   background-color: #125f5b;
@@ -623,8 +623,7 @@ h3 {
   .product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    object-fit: cover;
+    gap: 5px;
   }
 
   .gallery-grid {
