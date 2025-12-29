@@ -342,8 +342,9 @@ h3 {
 /* Video Section */
 .video-section {
   position: relative;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .video-section video {
