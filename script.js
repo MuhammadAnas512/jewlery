@@ -21,26 +21,26 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Testimonial carousel (basic implementation)
-let currentTestimonial = 0;
-const testimonials = document.querySelectorAll(".testimonial");
+// // Testimonial carousel (basic implementation)
+// let currentTestimonial = 0;
+// const testimonials = document.querySelectorAll(".testimonial");
 
-function showTestimonial(index) {
-  testimonials.forEach((testimonial, i) => {
-    testimonial.style.display = i === index ? "block" : "none";
-  });
-}
+// function showTestimonial(index) {
+//   testimonials.forEach((testimonial, i) => {
+//     testimonial.style.display = i === index ? "block" : "none";
+//   });
+// }
 
-if (testimonials.length > 0) {
-  showTestimonial(currentTestimonial);
+// if (testimonials.length > 0) {
+//   showTestimonial(currentTestimonial);
 
-  setInterval(() => {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    showTestimonial(currentTestimonial);
-  }, 3000);
-}
+//   setInterval(() => {
+//     currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+//     showTestimonial(currentTestimonial);
+//   }, 3000);
+// }
 
-const icons = document.querySelectorAll('[class^="icon-"]');
-icons.forEach((icon) => {
-  icon.textContent = "●"; // Placeholder dot
-});
+// const icons = document.querySelectorAll('[class^="icon-"]');
+// icons.forEach((icon) => {
+//   icon.textContent = "●"; // Placeholder dot
+// });

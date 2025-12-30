@@ -983,3 +983,34 @@ h3 {
     height: 180px;
   }
 }
+/* testimonials */
+.test {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 100%;
+  max-width: 330px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .testimonial {
+    width: 100%;
+    max-width: 350px;
+  }
+}
