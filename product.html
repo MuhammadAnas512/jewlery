@@ -1,27 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Product</title>
+  <meta charset="UTF-8" /><link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Eterna Jewels</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body class="font-[Roboto] bg-white text-gray-900">
 
-<h1 id="name"></h1>
-<h2 id="price"></h2>
-<img id="image" width="300">
+<!-- Navbar (same as your collection page) -->
+<header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 flex h-16 items-center justify-between">
+    <a href="index.html" class="text-2xl font-serif">Eterna <span class="text-amber-600">Jewels</span></a>
+    <div class="hidden lg:flex space-x-8 text-gray-700">
+      <a href="index.html" class="hover:text-amber-600">Home</a>
+      <a href="shop.html" class="hover:text-amber-600">Shop</a>
+      <a href="collections.html" class="hover:text-amber-600">Collections</a>
+      <a href="contact.html" class="hover:text-amber-600">Contact</a>
+    </div>
+    <div class="flex space-x-4 text-lg">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-user"></i>
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+  </nav>
+</header>
 
-<br><br>
-<button>Add to Cart</button>
+<!-- Breadcrumb -->
+<div class="max-w-7xl mx-auto px-6 py-4 text-sm text-gray-500">
+  Home / Collections / <span class="text-gray-900">Product</span>
+</div>
 
+<!-- Product Section -->
+<section class="max-w-7xl mx-auto px-6 py-12 grid lg:grid-cols-2 gap-12">
+
+  <!-- Left: Image Gallery -->
+  <div class="grid grid-cols-4 gap-4">
+    <div class="col-span-4 border rounded-lg overflow-hidden">
+      <img src="images/a.jpg" alt="Product" class="w-full h-[520px] object-cover">
+    </div>
+    <img src="images/sample-product.jpg" class="border rounded cursor-pointer">
+    <img src="images/sample-product.jpg" class="border rounded cursor-pointer">
+    <img src="images/sample-product.jpg" class="border rounded cursor-pointer">
+    <img src="images/sample-product.jpg" class="border rounded cursor-pointer">
+  </div>
+
+  <!-- Right: Product Info -->
+  <div>
+    <h1 class="font-[Playfair_Display] text-3xl font-semibold mb-4">Diamond Bridal Necklace</h1>
+    <p class="text-xl text-amber-600 font-medium mb-6">Rs. 120,000</p>
+
+    <!-- Size -->
+    <div class="mb-6">
+      <h4 class="font-medium mb-2">Size</h4>
+      <div class="flex gap-3">
+        <button class="border px-4 py-2 rounded hover:border-amber-600">S</button>
+        <button class="border px-4 py-2 rounded hover:border-amber-600">M</button>
+        <button class="border px-4 py-2 rounded hover:border-amber-600">L</button>
+      </div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="mb-6">
+      <h4 class="font-medium mb-2">Quantity</h4>
+      <div class="flex items-center border w-max rounded">
+        <button class="px-4 py-2">-</button>
+        <span class="px-4">1</span>
+        <button class="px-4 py-2">+</button>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <button class="w-full bg-black text-white py-4 rounded-lg hover:bg-gray-800 transition">
+      ADD TO CART
+    </button>
+
+    <!-- Details -->
+    <div class="mt-8 space-y-4 text-gray-600">
+      <p><strong>Material:</strong> Premium Diamond & Gold</p>
+      <p><strong>Category:</strong> Bridal Collection</p>
+      <p><strong>Care:</strong> Keep away from moisture and perfumes</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-6">
+    <div>
+      <h3 class="font-bold text-lg mb-4">Eterna Jewels</h3>
+      <p>Handcrafted luxury jewelry for every occasion.</p>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-amber-600">Home</a></li>
+        <li><a href="#" class="hover:text-amber-600">Shop</a></li>
+        <li><a href="#" class="hover:text-amber-600">Collections</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-4">Policies</h3>
+      <ul class="space-y-2">
+        <li>Refund Policy</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-4">Newsletter</h3>
+      <input type="email" placeholder="Email" class="w-full px-3 py-2 rounded text-black mb-2">
+      <button class="bg-amber-600 w-full py-2 rounded">Subscribe</button>
+    </div>
+  </div>
+  
+</footer>
 <script>
-document.getElementById("name").innerText =
-  localStorage.getItem("productName");
+const products = {
+  ring1: {
+    name: "Diamond Ring",
+    price: "Rs. 80,000",
+    desc: "Premium diamond ring for special occasions",
+    image: "images/ring.jpg"
+  },
+  necklace1: {
+    name: "Gold Necklace",
+    price: "Rs. 120,000",
+    desc: "Luxury handcrafted gold necklace",
+    image: "images/necklace.jpg"
+  }
+};
 
-document.getElementById("price").innerText =
-  localStorage.getItem("productPrice");
-
-document.getElementById("image").src =
-  localStorage.getItem("productImage");
+const id = new URLSearchParams(window.location.search).get("id");
+document.getElementById("title").innerText = products[id].name;
 </script>
-
 </body>
 </html>
